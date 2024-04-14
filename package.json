@@ -4,9 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node --watch --env-file=.env index.js",
-    "start": "node --env-file=.env index.js",
-    "lint": "eslint"
+    "dev": "node --watch index.js",
+    "start": "node index.js",
+    "lint": "eslint",
+    "migrations:generate": "sequelize-cli migration:generate --name",
+    "migrations:run": "sequelize-cli db:migrate",
+    "migrations:undo": "sequelize-cli db:migrate:undo",
+    "migrations:rollback": "sequelize-cli db:migrate:undo:all"
   },
   "keywords": [],
   "author": "",

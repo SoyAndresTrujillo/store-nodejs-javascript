@@ -1,5 +1,7 @@
+require('dotenv').config()
+
 const config = {
-  env: process.env.NODE_ENV || 3000,
+  env: process.env.NODE_ENV,
   DB_HOST: process.env.DB_HOST,
   DB_PORT: process.env.DB_PORT || 5432,
   DB_NAME: process.env.DB_NAME,
